@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Dice Roller</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="roller.js"></script>
+    </head>
+    <!-- automatically roll the dice the first time when the page is first loaded with onload-->
+    <body onload="RollSixSidedDice()">
+        <div class = "header">
+            <h1>Dice Roll Game</h1>
+            <!-- instructions that describe how to roll dice for the game -->
+            <p><i>Click on the Roll Dice button or press Enter to roll two six-sided dice at the same time, with 
+                each dice for each of the two players. The player with the larger number wins.</i></p>
+            <div class = "container">
+                <div class = "wrapper">
+                    <div class = "input-wrapper">
+                        <label for="xID">Player 1</label>
+                        <input id="xID" type="text" size="10" disabled>
+                    </div>
+                    <div class = "input-wrapper">
+                        <label for="yID">Player 2</label>
+                        <input id="yID" type="text" size="10" disabled>
+                    </div>
+                </div>
+                <div class = "roll">
+                    <!-- automatically focus the "roll" button with autofocus -->
+                    <button type="button" autofocus onclick="RollSixSidedDice()">Roll Dice</button>
+                    <input id="dice" type="text" value="" disabled>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>
